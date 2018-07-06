@@ -9,7 +9,7 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'setarn'
-          command: 'sudo npm install  yarn'
+          command: 'npm install  yarn'
       - run:
           name: 'yarn'
           command: 'yarn install'
