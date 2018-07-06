@@ -72,7 +72,7 @@
     "chalk": "2.4.0",
     "connect-history-api-fallback": "1.5.0",
     "copy-webpack-plugin": "4.5.1",
-    "cross-env": "5.1.4",
+    "cross-env": "^5.1.4",
     "css-loader": "0.28.11",
     "css-mqpacker": "6.0.2",
     "cssnano": "3.10.0",
