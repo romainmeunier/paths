@@ -13,5 +13,5 @@ jobs:
           command: 'yarn install'
       - run:
           name: 'build'
-          command: 'yarn run'
+          command: 'yarn run build'
 
