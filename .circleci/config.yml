@@ -4,6 +4,7 @@ jobs:
     docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
       - image: circleci/node:8
     steps:
+      - checkout:
       - restore_cache:
           keys:
           # when lock file changes, use increasingly general patterns to restore cache
@@ -11,10 +12,13 @@ jobs:
           - yarn-packages-v1-{{ .Branch }}-
           - yarn-packages-v1-
       - run:
-          name: 'nuxt-build'
-          command: 'npm run nuxt:build'
+          name: 'yarn'
+          command: 'yarn install'
       - save_cache:
           paths:
           - ~/.cache/yarn
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: 'build'
+          command: 'yarn nuxt:build'
 
