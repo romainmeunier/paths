@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js run nuxt:start
+  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js run webpack:deploy
 
 PATH: 
   /Users/djrom/google-cloud-sdk/bin:/Users/djrom/.yarn/bin:/Users/djrom/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/usr/local/munki:/usr/local/opt/go/libexec/bin:/Users/djrom/go/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/romain/anaconda3/bin:/usr/local/opt/fzf/bin
@@ -17,7 +17,7 @@ npm manifest:
   {
     "name": "oax",
     "description": "OpenAPI Specification Explorer",
-    "version": "1.0.407",
+    "version": "1.0.409",
     "author": "Jan Forst <ensonador@gmail.com>",
     "browserslist": [
       "> 5%",
@@ -7681,10 +7681,10 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 127
+  Exit code: 1
   Command: sh
-  Arguments: -c nuxt start
-  Directory: /Users/djrom/RouterUI/oax
+  Arguments: -c npm --no-git-tag-version version patch && npm run data:dependencies && npm run webpack:build && deploy-to-gh-pages --local ./dist
+  Directory: /Users/djrom/RouterUI/oax/paths
   Output:
   
       at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
