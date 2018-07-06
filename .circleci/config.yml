@@ -12,8 +12,7 @@ jobs:
           name: 'yarn'
           command: 'yarn run install'
       - save_cache:
-          paths:
-          - ~/.cache/yarn
+          paths: ~/.cache/yarn
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
