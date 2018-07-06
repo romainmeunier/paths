@@ -8,8 +8,8 @@ jobs:
 #      - restore_cache:
 #          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
-          name: 'add yarn '
-          command: 'npm install  yarn@1.7.0 --save'
+#          name: 'add yarn '
+          command: 'yarn'
       - run:
           name: 'yarn install'
           command: 'yarn'
@@ -18,5 +18,5 @@ jobs:
 #          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
-          command: 'yarn run webpack'
+          command: 'yarn run
 
