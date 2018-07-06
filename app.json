@@ -7,14 +7,14 @@
     "postinstall": "npm run nuxt:build",
     "start":"npm run nuxt:start"
   },
-  "env": {
-    "NPM_CONFIG_PRODUCTION": {
-      "value": false
-    },
-    "YARN_PRODUCTION": {
-      "value": false
-    }
-  },
+//  "env": {
+//    "NPM_CONFIG_PRODUCTION": {
+//      "value": false
+//    },
+//    "YARN_PRODUCTION": {
+//      "value": false
+//    }
+//  },
   "formation": {
     "web": {
       "quantity": 1
