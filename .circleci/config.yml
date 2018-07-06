@@ -2,20 +2,20 @@ version: 2
 jobs:
   build:
     docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
-      - image: circleci/node:8
+      - image: circleci/node:9
     steps:
       - checkout
-      - restore_cache:
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+#      - restore_cache:
+#          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'add yarn '
           command: 'npm install  yarn@1.7.0 --save'
       - run:
           name: 'yarn install'
-          command: 'yarn install'
-      - save_cache:
-          paths: ~/.cache/yarn
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          command: 'yarn'
+#      - save_cache:
+#          paths: ~/.cache/yarn
+#          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
           command: 'yarn run webpack'
