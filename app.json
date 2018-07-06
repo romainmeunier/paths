@@ -1,8 +1,8 @@
 {
   "name": "paths",
   "scripts": {
-    "postinstall": "npm run
-    "postinstall":"postinstall
+    "postinstall": "npm run nuxt:build"
+    "start":"npm run nuxt:start"
   },
   "env": {
     "NPM_CONFIG_PRODUCTION": {
