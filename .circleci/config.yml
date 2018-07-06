@@ -6,9 +6,8 @@ jobs:
     steps:
       - checkout:
       - restore_cache:
-          keys:
           # when lock file changes, use increasingly general patterns to restore cache
-          - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'yarn'
           command: 'yarn run install'
