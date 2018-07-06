@@ -9,16 +9,14 @@ jobs:
           keys:
           # when lock file changes, use increasingly general patterns to restore cache
           - yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
-          - yarn-packages-v1-{{ .Branch }}-
-          - yarn-packages-v1-
       - run:
           name: 'yarn'
-          command: 'yarn install'
+          command: 'yarn run install'
       - save_cache:
           paths:
           - ~/.cache/yarn
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
-          command: 'yarn nuxt:build'
+          command: 'yarn run nuxt:build'
 
