@@ -1,15 +1,15 @@
 {
   "name": "paths",
   "scripts": {
-    "postinstall": "npm run nuxt:build"
+    "postinstall": "npm run nuxt:build",
     "start":"npm run nuxt:start"
   },
   "env": {
     "NPM_CONFIG_PRODUCTION": {
-      "required": true
+      "required": false
     },
     "YARN_PRODUCTION": {
-      "required": true
+      "required": false
     }
   },
   "formation": {
