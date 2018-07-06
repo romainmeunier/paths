@@ -7,13 +7,10 @@ jobs:
       - checkout
       - run:
           name: 'add yarn '
-          command: 'yarn i s'
+          command: 'yarn i '
       - run:
           name: 'yarn install'
           command: 'yarn '
-#      - save_cache:
-#          paths: ~/.cache/yarn
-#          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
           command: 'yarn run'
