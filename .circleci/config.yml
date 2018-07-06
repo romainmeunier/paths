@@ -16,5 +16,5 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
-          command: 'yarn run nuxt:build'
+          command: 'yarn run "nuxt:build"'
 
