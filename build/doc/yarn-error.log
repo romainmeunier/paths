@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js run doc:screenshots
+
+PATH: 
+  /Users/djrom/.yarn/bin:/Users/djrom/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/usr/local/munki:/usr/local/opt/go/libexec/bin:/Users/djrom/go/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/romain/anaconda3/bin:/usr/local/opt/fzf/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.11.2
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "oax-doc",
+    "private": true,
+    "scripts": {
+      "doc:imagemin": "imagemin doc/screenshots/images/*.png --out-dir doc/screenshots/images",
+      "doc:screenshots": "node ./build/doc/screenshots.js && node ./build/doc/screenshots-index.js",
+      "doc:screenshots-xs": "node ./build/doc/screenshots.js xs && node ./build/doc/screenshots-index.js xs",
+      "doc:screenshots-xs+md": "node ./build/doc/screenshots.js xs,md && node ./build/doc/screenshots-index.js xs,md",
+      "doc:test-links": "node ./build/doc/test-links.js"
+    },
+    "devDependencies": {
+      "imagemin-cli": "^3.0.0",
+      "puppeteer": "^0.12.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c node ./build/doc/screenshots.js && node ./build/doc/screenshots-index.js
+  Directory: /Users/djrom/RouterUI/oax/build/doc
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:180:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
