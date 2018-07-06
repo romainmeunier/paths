@@ -1,1 +1,1 @@
-web: npm run webpack:build
+web: npm run nuxt:build
