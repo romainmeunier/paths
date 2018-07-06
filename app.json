@@ -1,15 +1,18 @@
 {
   "name": "paths",
+  "engines": {
+    "node": "8.9.4"
+  },
   "scripts": {
     "postinstall": "npm run nuxt:build",
     "start":"npm run nuxt:start"
   },
   "env": {
     "NPM_CONFIG_PRODUCTION": {
-      "required": false
+      "required": true
     },
     "YARN_PRODUCTION": {
-      "required": false
+      "required": true
     }
   },
   "formation": {
