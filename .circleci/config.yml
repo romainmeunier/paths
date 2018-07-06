@@ -4,7 +4,7 @@ jobs:
     docker: # See https://docs.docker.com/get-started/#docker-concepts if you are new to Docker.
       - image: circleci/node:8
     steps:
-      - checkout:
+      - checkout
       - restore_cache:
           # when lock file changes, use increasingly general patterns to restore cache
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
