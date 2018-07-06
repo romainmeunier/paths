@@ -6,8 +6,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          # when lock file changes, use increasingly general patterns to restore cache
-          key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: 'setarn'
+          command: 'sudo npm install -g npm@5'
       - run:
           name: 'yarn'
           command: 'yarn install'
@@ -16,5 +17,5 @@ jobs:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
           name: 'build'
-          command: 'yarn run "nuxt:build"'
+          command: 'yarn run nuxt:build'
 
