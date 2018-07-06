@@ -8,10 +8,10 @@ jobs:
       - restore_cache:
           key: yarn-packages-v1-{{ .Branch }}-{{ checksum "yarn.lock" }}
       - run:
-          name: 'setarn'
-          command: 'npm install  yarn@1.8.0 --save'
+          name: 'add yarn '
+          command: 'npm install  yarn@1.7.0 --save'
       - run:
-          name: 'yarn'
+          name: 'yarn install'
           command: 'yarn install'
       - save_cache:
           paths: ~/.cache/yarn
