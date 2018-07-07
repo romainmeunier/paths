@@ -10,5 +10,5 @@ jobs:
           command: 'yarn install'
       - run:
           name: 'build'
-          command: 'yarn run build'
+          command: 'yarn run webpack:build'
 
