@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js run webpack:deploy
+  /usr/local/Cellar/node/10.1.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js run lint:ts
 
 PATH: 
   /Users/djrom/google-cloud-sdk/bin:/Users/djrom/.yarn/bin:/Users/djrom/.config/yarn/global/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/usr/local/share/dotnet:/usr/local/munki:/usr/local/opt/go/libexec/bin:/Users/djrom/go/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/romain/anaconda3/bin:/usr/local/opt/fzf/bin
@@ -15,7 +15,7 @@ Platform:
 
 npm manifest: 
   {
-    "name": "oax",
+    "name": "paths",
     "description": "OpenAPI Specification Explorer",
     "version": "1.0.409",
     "author": "Jan Forst <ensonador@gmail.com>",
@@ -88,7 +88,7 @@ npm manifest:
       "chalk": "2.4.0",
       "connect-history-api-fallback": "1.5.0",
       "copy-webpack-plugin": "4.5.1",
-      "cross-env": "5.1.4",
+      "cross-env": "^5.1.4",
       "css-loader": "0.28.11",
       "css-mqpacker": "6.0.2",
       "cssnano": "3.10.0",
@@ -2132,11 +2132,11 @@ Lockfile:
       safe-buffer "^5.0.1"
       sha.js "^2.4.8"
   
-  cross-env@5.1.4:
-    version "5.1.4"
-    resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.4.tgz#f61c14291f7cc653bb86457002ea80a04699d022"
+  cross-env@^5.1.4:
+    version "5.2.0"
+    resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.2.0.tgz#6ecd4c015d5773e614039ee529076669b9d126f2"
     dependencies:
-      cross-spawn "^5.1.0"
+      cross-spawn "^6.0.5"
       is-windows "^1.0.0"
   
   cross-spawn@^5.0.1, cross-spawn@^5.1.0:
@@ -7681,9 +7681,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 127
   Command: sh
-  Arguments: -c npm --no-git-tag-version version patch && npm run data:dependencies && npm run webpack:build && deploy-to-gh-pages --local ./dist
+  Arguments: -c tslint --fix -c tslint.json assets/**/*.ts components/**/*.ts
   Directory: /Users/djrom/RouterUI/oax/paths
   Output:
   
