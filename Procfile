@@ -1,1 +1,1 @@
-web: npm run webpack:dev
+web: npm run http-server dist
