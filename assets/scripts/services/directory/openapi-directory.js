@@ -3,8 +3,8 @@ import { colored } from './openapi-directory-lite'
 export default {
   title: 'OpenAPI Directory',
   subTitle: 'HACKED Community driven online collection',
-  home: 'http://api-dir.herokuapp.com',
-  base: 'http://api-dir.herokuapp.com/v2/list.json',
+  home: 'https://romainmeunier.github.io/openapi-directory',
+  base: 'https://romainmeunier.github.io/openapi-directory/v2/list.json',
   keys: true,
   categories: true,
   unclassified: true,
