@@ -19,5 +19,5 @@ jobs:
             - ~/.cache/yarn
       - run:
           name: 'build'
-          command: 'yarn run webpack:build'
+          command: 'yarn run webpack:deploy'
 

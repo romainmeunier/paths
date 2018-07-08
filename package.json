@@ -163,7 +163,7 @@
     "vendor:vuetify": "cross-env NODE_ENV=es5 babel build/vuetify/src --out-dir build/vuetify/es5 && node ./build/utils/patch.js vuetify",
     "vendor:walk-parse5": "cross-env NODE_ENV=es5 babel node_modules/walk-parse5 --out-dir node_modules/walk-parse5",
     "webpack:build": "node build",
-    "webpack:deploy": "npm --no-git-tag-version version patch && npm run data:dependencies && npm run webpack:build && deploy-to-gh-pages --local ./dist",
+    "webpack:deploy": "npm --no-git-tag-version version patch && npm run data:dependencies && npm run webpack:build && deploy-to-gh-pages --repo romainmeunier/paths ./dist",
     "webpack:dev": "node build/dev-server.js",
     "webpack:report": "npm run webpack:build --report",
     "heroku-prebuild": "npm run data:dependencies",
