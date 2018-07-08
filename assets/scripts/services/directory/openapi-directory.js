@@ -2,9 +2,9 @@ import { colored } from './openapi-directory-lite'
 
 export default {
   title: 'OpenAPI Directory',
-  subTitle: 'Community driven online collection',
+  subTitle: 'HACKED Community driven online collection',
   home: 'https://apis.guru/openapi-directory/',
-  base: 'https://api.apis.guru/v2/list.json',
+  base: 'https://api-dir.herokuapp.com/v2/list.json',
   keys: true,
   categories: true,
   unclassified: true,
